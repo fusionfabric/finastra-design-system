@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use 'angular-theme/lib/core/theming/palette';
+@use 'angular-theme/lib/core/style/spacing';
+
+@mixin theme($theme) {
+  $primary: map.get($theme, primary);
+  $foreground: map.get($theme, foreground);
+
+  .selectable-card {
+    border: 1px solid transparent;
+    cursor: pointer;
+    .checked {
+      display: none;
+    }
+
+    &:hover {
+      background: palette.get-color-from-palette($primary, default, 0.05);
+      .checked {
+        display: block;
+        position: absolute;
+        right: spacing.$uxg-spacing-2;
+        top: spacing.$uxg-spacing-2;
+        .mat-icon {
+          color: palette.get-color-from-palette($primary, default);
+        }
+      }
+    }
+  }
+
+  .selected-card {
+    border: 1px solid palette.get-color-from-palette($primary, default);
+    background: palette.get-color-from-palette($primary, default, 0.1);
+
+    .checked {
+      display: block;
+      position: absolute;
+      right: spacing.$uxg-spacing-2;
+      top: spacing.$uxg-spacing-2;
+      .mat-icon {
+        color: palette.get-color-from-palette($primary, default);
+      }
+    }
+
+    &:hover {
+      background: palette.get-color-from-palette($primary, default, 0.1);
+      .checked {
+        .mat-icon {
+          color: palette.get-color-from-palette($primary, default);
+        }
+      }
+    }
+  }
+}

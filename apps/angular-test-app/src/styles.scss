@@ -14,6 +14,7 @@
 @use "toaster/src/toaster.theme" as toaster;
 @use "video-thumbnail/src/video-thumbnail.theme" as video-thumbnail;
 @use "status-steps/status-stepper.theme" as status-stepper;
+@use "cards/account-card/src/account-card.theme" as account-card;
 
 @use "./app/components/repeater-demo/repeater-card-example/repeater-card-example.theme" as repeater;
 
@@ -42,6 +43,7 @@
   @include toaster.theme($theme);
   @include video-thumbnail.theme($theme);
   @include status-stepper.theme($theme);
+  @include account-card.theme($theme);
 }
 
 @include app-theme(fds.$light-theme);

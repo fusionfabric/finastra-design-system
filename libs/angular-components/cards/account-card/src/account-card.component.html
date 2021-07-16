@@ -1,4 +1,8 @@
-<mat-card>
+<mat-card [ngClass]="{ 'selectable-card': selectable, 'selected-card': selected }" (click)="onCardClick(selected)">
+  <span *ngIf="selectedWithCheckIcon && selectable" class="checked">
+    <mat-icon>{{ selected ? 'check_circle' : 'check_circle_outlined' }}</mat-icon>
+  </span>
+
   <mat-card-content>
     <div class="uxg-icon-category">
       <mat-icon aria-label="credit card icon">credit_card</mat-icon>
@@ -8,6 +12,6 @@
   </mat-card-content>
   <mat-card-footer>
     <mat-divider></mat-divider>
-    <div class="uxg-body-2 account-number">{{ number }}</div>
+    <div class="uxg-body-3 account-number">{{ number }}</div>
   </mat-card-footer>
 </mat-card>

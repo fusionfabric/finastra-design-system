@@ -42,4 +42,8 @@ export class AccountCardDemoComponent implements OnInit {
       this.accounts$.next(this.accounts);
     }, 1500);
   }
+
+  onClick(event: any) {
+    console.log(event);
+  }
 }

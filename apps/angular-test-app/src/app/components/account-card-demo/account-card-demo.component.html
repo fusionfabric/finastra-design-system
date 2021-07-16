@@ -1,3 +1,4 @@
+<h2>Default Account Card</h2>
 <div class="accounts-list">
   <ng-container *ngIf="accounts$ | async as accounts; else loading">
     <uxg-account-card
@@ -15,4 +16,29 @@
     <uxg-account-card-skeleton></uxg-account-card-skeleton>
     <uxg-account-card-skeleton></uxg-account-card-skeleton>
   </ng-template>
+</div>
+
+<br />
+
+<h2>Selectable Account Card</h2>
+<div class="accounts-list">
+  <uxg-account-card
+    [name]="accounts[0].name"
+    [balance]="accounts[0].balance"
+    [currency]="accounts[0].currency"
+    [number]="accounts[0].number"
+    [selectable]="true"
+    [selectedWithCheckIcon]="true"
+    (onClick)="onClick($event)"
+  ></uxg-account-card>
+
+  <uxg-account-card
+    [name]="accounts[1].name"
+    [balance]="accounts[1].balance"
+    [currency]="accounts[1].currency"
+    [number]="accounts[1].number"
+    [selectable]="true"
+    [selectedWithCheckIcon]="false"
+    (onClick)="onClick($event)"
+  ></uxg-account-card>
 </div>
