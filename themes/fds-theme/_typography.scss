@@ -1,0 +1,55 @@
+@use 'sass:map';
+@use './typography-styles';
+@use '@material/feature-targeting/feature-targeting';
+@use "@material/typography" with (
+  $styles: typography-styles.$fds-styles
+);
+
+$styles-headline1: () !default;
+$styles-headline2: () !default;
+$styles-headline3: () !default;
+$styles-headline4: () !default;
+$styles-headline5: () !default;
+$styles-headline6: () !default;
+$styles-subtitle1: () !default;
+$styles-subtitle2: () !default;
+$styles-subtitle3: () !default;
+$styles-body1: () !default;
+$styles-body2: () !default;
+$styles-body3: () !default;
+$styles-button: () !default;
+$styles-caption: () !default;
+$styles-overline: () !default;
+
+$unused: typography.set-styles_(
+  typography.$base,
+  typography-styles.$fds-styles,
+  (
+    headline1: $styles-headline1,
+    headline2: $styles-headline2,
+    headline3: $styles-headline3,
+    headline4: $styles-headline4,
+    headline5: $styles-headline5,
+    headline6: $styles-headline6,
+    subtitle1: $styles-subtitle1,
+    subtitle2: $styles-subtitle2,
+    subtitle3: $styles-subtitle3,
+    body1: $styles-body1,
+    body2: $styles-body2,
+    body3: $styles-body3,
+    button: $styles-button,
+    caption: $styles-caption,
+    overline: $styles-overline,
+  )
+);
+
+@mixin core-styles() {
+  @include typography.core-styles;
+  :root {
+    @each $typo-style, $typo-style-props in $unused {
+      @each $typo-style-property, $typo-style-property-value in $typo-style-props {
+        --mdc-typography-#{$typo-style}-#{$typo-style-property}: #{$typo-style-property-value};
+      }
+    }
+  }
+}

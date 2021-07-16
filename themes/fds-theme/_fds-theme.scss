@@ -1,0 +1,14 @@
+@use '@material/theme/custom-properties';
+@use './all-themes' as theme;
+
+@mixin -fds-styles() {
+  @include theme.core-styles;
+  .mdc-theme--gradient {
+    @include theme.property(background, custom-properties.create(--mdc-theme-gradient, linear-gradient(var(--mdc-theme-primary), var(--mdc-theme-secondary))));
+  }
+  .mdc-theme--error-bg {
+    @include theme.property(background, custom-properties.create(--mdc-theme-gradient, var(--mdc-theme-error)));
+  }
+}
+
+@include -fds-styles;

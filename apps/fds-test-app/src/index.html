@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+    <title>fds</title>
+  </head>
+  <body>
+    <div class="buttons">
+      <div class="demo">
+        <button class="mdc-button mdc-button--unelevated">
+          <span class="mdc-button__ripple"></span>
+          <i class="material-icons mdc-button__icon" aria-hidden="true">account_circle</i>
+          <span class="mdc-button__label">mdc unelevated</span>
+        </button>
+        <mwc-button unelevated label="mwc unelevated" icon="account_circle"></mwc-button>
+      </div>
+
+      <div class="demo">
+        <button class="mdc-button mdc-button--unelevated mdc-button--dense">
+          <span class="mdc-button__ripple"></span>
+          <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+          <span class="mdc-button__label">mdc dense</span>
+        </button>
+        <mwc-button dense unelevated label="mwc dense" icon="favorite"></mwc-button>
+      </div>
+
+      <div class="demo">
+        <button class="mdc-button mdc-button--outlined">
+          <span class="mdc-button__ripple"></span>
+          <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+          <span class="mdc-button__label">mdc outlined</span>
+        </button>
+        <mwc-button outlined label="mwc outlined" icon="add"></mwc-button>
+      </div>
+    </div>
+
+    <div class="colors">
+      <div class="swatch mdc-theme--primary-bg"></div>
+      <div class="swatch mdc-theme--secondary-bg"></div>
+      <div class="swatch mdc-theme--gradient"></div>
+      <div class="swatch mdc-theme--background"></div>
+      <div class="swatch mdc-theme--surface"></div>
+      <div class="swatch mdc-theme--error-bg"></div>
+    </div>
+
+    <div class="typography">
+      <h1 class="mdc-typography--headline1 mdc-theme--on-surface">Headline 1</h1>
+      <h2 class="mdc-typography--headline2 mdc-theme--on-surface">Headline 2</h2>
+      <h3 class="mdc-typography--headline3 mdc-theme--on-surface">Headline 3</h3>
+      <h4 class="mdc-typography--headline4 mdc-theme--on-surface">Headline 4</h4>
+      <h5 class="mdc-typography--headline5 mdc-theme--on-surface">Headline 5</h5>
+      <h6 class="mdc-typography--headline6 mdc-theme--on-surface">Headline 6</h6>
+      <p class="mdc-typography--subtitle1 mdc-theme--on-surface">subtitle 1</p>
+      <p class="mdc-typography--subtitle2 mdc-theme--on-surface">subtitle 2</p>
+      <p class="mdc-typography--subtitle3 mdc-theme--on-surface">subtitle 3</p>
+      <p class="mdc-typography--body1 mdc-theme--on-surface">body 1</p>
+      <p class="mdc-typography--body2 mdc-theme--on-surface">body 2</p>
+      <p class="mdc-typography--body3 mdc-theme--on-surface">body 3</p>
+      <p class="mdc-typography--button mdc-theme--on-surface">button</p>
+      <p class="mdc-typography--caption mdc-theme--on-surface">caption</p>
+      <p class="mdc-typography--overline mdc-theme--on-surface">overline</p>
+    </div>
+  </body>
+</html>

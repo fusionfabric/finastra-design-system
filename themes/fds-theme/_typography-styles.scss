@@ -1,0 +1,137 @@
+@use 'sass:math';
+@use 'sass:string';
+
+@function px-to-rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
+
+$font-family: string.unquote('Spartan') !default;
+
+$fds-styles: (
+  headline1: (
+    font-family: $font-family,
+    font-size: px-to-rem(60px),
+    line-height: px-to-rem(90px),
+    font-weight: 800,
+    letter-spacing: -0.5px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  headline2: (
+    font-family: $font-family,
+    font-size: px-to-rem(48px),
+    line-height: px-to-rem(72px),
+    font-weight: 800,
+    letter-spacing: -0.5px,
+    text-decoration: inherit,
+    text-transform: inherit,
+    ),
+  headline3: (
+    font-family: $font-family,
+    font-size: px-to-rem(32px),
+    line-height: px-to-rem(48px),
+    font-weight: 800,
+    letter-spacing: 0,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  headline4: (
+    font-family: $font-family,
+    font-size: px-to-rem(24px),
+    line-height: px-to-rem(36px),
+    font-weight: 800,
+    letter-spacing: 0,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  headline5: (
+    font-family: $font-family,
+    font-size: px-to-rem(18px),
+    line-height: px-to-rem(27px),
+    font-weight: 800,
+    letter-spacing: 0.18px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  headline6: (
+    font-family: $font-family,
+    font-size: px-to-rem(14px),
+    line-height: px-to-rem(21px),
+    font-weight: 800,
+    letter-spacing: 0.15px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  subtitle1: (
+    font-size: px-to-rem(16px),
+    line-height: px-to-rem(24px),
+    font-weight: 500,
+    letter-spacing: 0.15px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  subtitle2: (
+    font-size: px-to-rem(14px),
+    line-height: px-to-rem(21px),
+    font-weight: 500,
+    letter-spacing: 0.1px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  subtitle3: (
+    font-size: px-to-rem(12px),
+    line-height: px-to-rem(18px),
+    font-weight: 500,
+    letter-spacing: 0.1px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  body1: (
+    font-size: px-to-rem(16px),
+    line-height: px-to-rem(24px),
+    font-weight: 300,
+    letter-spacing: 0.5px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  body2: (
+    font-size: px-to-rem(14px),
+    line-height: px-to-rem(21px),
+    font-weight: 300,
+    letter-spacing: 0.25px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  body3: (
+    font-size: px-to-rem(12px),
+    line-height: px-to-rem(18px),
+    font-weight: 300,
+    letter-spacing: 0.25px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  button: (
+    font-size: px-to-rem(14px),
+    line-height: px-to-rem(20px),
+    font-weight: 700,
+    letter-spacing: 1.25px,
+    text-decoration: inherit,
+    text-transform: none,
+  ),
+  caption: (
+    font-size: px-to-rem(12px),
+    line-height: px-to-rem(18px),
+    font-weight: 400,
+    letter-spacing: 0.4px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  ),
+  overline: (
+    font-size: px-to-rem(10px),
+    line-height: px-to-rem(15px),
+    font-weight: 500,
+    letter-spacing: 1.5px,
+    text-decoration: inherit,
+    text-transform: inherit,
+  )
+)

@@ -1,0 +1,23 @@
+on:
+  push:
+    branch:
+      - 'master'
+    tags:
+      - v*
+    paths:
+      - 'themes/fds-theme/**'
+
+name: Create FDS release
+
+jobs:
+  publish:
+    needs: build
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish fds theme
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.FFDC_BOT_NPM_AUTH_TOKEN }}
+          package: ./themes/fds-theme/package.json
+          access: public

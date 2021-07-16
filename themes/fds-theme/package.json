@@ -1,0 +1,19 @@
+{
+  "name": "@finastra/fds-theme",
+  "version": "0.0.1-alpha",
+  "author": "Talbot, Thomas <thomas.talbot@finastra.com>",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/finastra/finastra-design-system.git",
+    "directory": "themes/fds-theme"
+  },
+  "peerDependencies": {
+    "@material/theme": "^11.0.0",
+    "@material/typography": "^11.0.0",
+    "@material/elevation": "^11.0.0",
+    "@material/shape": "^11.0.0",
+    "@material/button": "^11.0.0"
+  }
+}

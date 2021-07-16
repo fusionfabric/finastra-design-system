@@ -1,0 +1,27 @@
+@use "./../../../themes/fds-theme" ;
+@use "./../../../themes/fds-theme/typography" ;
+@use "./../../../themes/fds-theme/button";
+@use "./../../../themes/fds-theme/elevation";
+
+@include fds-theme.core-styles;
+@include typography.core-styles;
+
+body {
+    @include fds-theme.property(background, background);
+}
+
+.dark {
+    @include fds-theme.dark-theme;
+}
+
+.demo {
+    margin: 10px;
+}
+
+.swatch {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    @include elevation.elevation(5);
+}

@@ -19,6 +19,10 @@
       "filename": "themes/angular-theme/package.json",
       "type": "json"
     },
+        {
+      "filename": "themes/fds-theme/package.json",
+      "type": "json"
+    },
     {
       "filename": "libs/angular-components/package.json",
       "updater": "scripts/standard-version-updater.js"

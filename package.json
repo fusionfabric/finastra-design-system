@@ -13,6 +13,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:theme": "ng build angular-theme --prod",
+    "build:fds-test-app": "ng build fds-test-app",
+    "start:fds-test-app": "ng serve fds-test-app",
     "postinstall": "ngcc --properties es2015 browser module main && node ./decorate-angular-cli.js",
     "build:devkit": "tsc -p ./tools/devkit/tsconfig.devkit.json && cpx -v \"./tools/devkit/**/*.json\" dist/tools/devkit",
     "dev": "npm start -- -o",
@@ -41,10 +43,12 @@
     "help": "nx help",
     "nx": "nx",
     "testjest": "jest",
-    "release": "npx standard-version -an",
+    "release:angular": "npx standard-version -an",
+    "release:wc": "cd themes/fds-theme && npx standard-version --prerelease alpha --dry-run",
     "changelog:theme": "cd themes/angular-theme && npx standard-version",
     "changelog:components": "cd libs/angular-components && npx standard-version",
-    "workspace-generator": "nx workspace-generator"
+    "workspace-generator": "nx workspace-generator",
+    "fix:deps": "npx npm-force-resolutions"
   },
   "husky": {
     "hooks": {
@@ -72,6 +76,9 @@
     "@angular/platform-browser": "12.1.0",
     "@angular/platform-browser-dynamic": "12.1.0",
     "@angular/router": "12.1.0",
+    "@material/button": "^11.0.0",
+    "@material/elevation": "^11.0.0",
+    "@material/mwc-button": "^0.21.0",
     "@ngrx/component-store": "12.0.0",
     "angular-plotly.js": "^4.0.0",
     "core-js": "^3.14.0",
@@ -85,6 +92,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^12.1.0",
     "@angular-devkit/build-angular": "12.1.0",
     "@angular-devkit/core": "12.1.0",
     "@angular-eslint/eslint-plugin": "~12.1.0",
@@ -153,5 +161,8 @@
     "ts-node": "10.0.0",
     "tsickle": "0.39.1",
     "typescript": "4.2.4"
+  },
+  "resolutions": {
+    "sass": "1.33.0"
   }
 }
