@@ -1,14 +1,15 @@
 @use 'sass:map';
 @use '~@angular/material' as mat;
 
-$primary-font: 'Roboto, roboto, "Helvetica Neue", sans-serif';
-$secondary-font: '"Futura EF", "futura-pt", "Futura", "Hind", "Verdana", "Arial Black", sans-serif';
+$primary-font: '"Roboto", "Helvetica Neue", sans-serif';
+$secondary-font: '"Spartan", "Arial Black", sans-serif';
 
 // font-weight :
 // light = 300
 // regular = 400
 // medium = 500
 // bold = 700
+// black = 900
 @function uxg-typography-config(
   $display-1:     mat.define-typography-level(72px, 108px, 300),
   $display-2:     mat.define-typography-level(60px, 90px, 300),
@@ -16,12 +17,12 @@ $secondary-font: '"Futura EF", "futura-pt", "Futura", "Hind", "Verdana", "Arial 
   $display-4:     mat.define-typography-level(44px, 66px, 300),
   $display-5:     mat.define-typography-level(28px, 42px, 300),
   $display-6:     mat.define-typography-level(20px, 30px, 300),
-  $h1:            mat.define-typography-level(60px, 72px, 700, $secondary-font),
-  $h2:            mat.define-typography-level(48px, 57px, 700, $secondary-font),
-  $h3:            mat.define-typography-level(32px, 38px, 700, $secondary-font),
-  $h4:            mat.define-typography-level(24px, 28px, 700, $secondary-font),
-  $h5:            mat.define-typography-level(18px, 21px, 700, $secondary-font),
-  $h6:            mat.define-typography-level(14px, 16px, 700, $secondary-font),
+  $h1:            mat.define-typography-level(51px, 71px, 800, $secondary-font),
+  $h2:            mat.define-typography-level(41px, 57px, 800, $secondary-font),
+  $h3:            mat.define-typography-level(28px, 39px, 800, $secondary-font),
+  $h4:            mat.define-typography-level(21px, 29px, 800, $secondary-font),
+  $h5:            mat.define-typography-level(16px, 22px, 800, $secondary-font),
+  $h6:            mat.define-typography-level(13px, 18px, 800, $secondary-font),
   $subtitle-1:    mat.define-typography-level(16px, 24px, 500),
   $subtitle-2:    mat.define-typography-level(14px, 21px, 500),
   $subtitle-3:    mat.define-typography-level(12px, 18px, 500),
